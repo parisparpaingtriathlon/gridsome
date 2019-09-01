@@ -1,0 +1,4 @@
+src/.temp
+.cache
+.idea
+node_modules
