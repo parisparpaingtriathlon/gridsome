@@ -1,5 +1,15 @@
-# Gridsome Starter Blog
+# Paris Parpaing Triathlon
 
-This is a minimal starter blog kit for markdown.
+This is the repo for the PPT blog
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gridsome/gridsome-starter-markdown-blog)
+## Contribution
+
+To avoid to have a complete CMS, we use the github workflow to add new articles.
+
+## Production
+
+The website is deployed with Netifly and accessible here http://parisparpaingtriathlon.netifly.com
+
+## Development
+
+The website uses the Gridsome technologie, to run it locally, you need to install gridsome-cli on your computer
