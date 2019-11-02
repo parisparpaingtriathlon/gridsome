@@ -1,5 +1,18 @@
 <template>
   <Layout>
+    <div>
+      <ul>
+        <li>
+          <g-link  to="/">Home</g-link>
+        </li>
+        <li v-if="$page.allTag" v-for="(tag, index) in $page.allTag.edges">
+          <g-link
+                  :to="tag.node.path"
+                  :key="index"
+          >{{tag.node.id}}</g-link>
+        </li>
+      </ul>
+    </div>
     <div class="article">
       <h1>{{ $page.blogPost.title }}</h1>
       <span>{{ $page.blogPost.date }}</span>
@@ -26,6 +39,14 @@ export default {
       date (format: "D MMMM, YYYY")
       content
       image
+    },
+    allTag {
+      edges {
+        node {
+          id
+          path
+        }
+      }
     }
   }
 </page-query>

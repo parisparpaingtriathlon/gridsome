@@ -8,8 +8,15 @@ module.exports = {
       options: {
         path: 'blog/*.md',
         typeName: 'BlogPost',
-        route: '/:slug'
+        route: '/post/:slug',
+        refs: {
+          tags: {
+            typeName: "Tag",
+            route: "/tag/:id",
+            create: true
+          }
+        }
       }
     }
   ]
-}
+};

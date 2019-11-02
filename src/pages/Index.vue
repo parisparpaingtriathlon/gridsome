@@ -1,5 +1,18 @@
 <template>
   <Layout class="home">
+    <div>
+      <ul>
+        <li>
+          <g-link  to="/">Home</g-link>
+        </li>
+        <li v-if="$page.allTag" v-for="(tag, index) in $page.allTag.edges">
+          <g-link
+                  :to="tag.node.path"
+                  :key="index"
+          >{{tag.node.id}}</g-link>
+        </li>
+      </ul>
+    </div>
     <ul>
       <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
         <router-link :to="node.path">
@@ -21,6 +34,14 @@
           title
           date (format: "D MMMM, YYYY")
           description
+          path
+        }
+      }
+    },
+    allTag {
+      edges {
+        node {
+          id
           path
         }
       }
