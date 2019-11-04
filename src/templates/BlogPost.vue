@@ -1,18 +1,6 @@
 <template>
   <Layout>
-    <div>
-      <ul>
-        <li>
-          <g-link  to="/">Home</g-link>
-        </li>
-        <li v-if="$page.allTag" v-for="(tag, index) in $page.allTag.edges">
-          <g-link
-                  :to="tag.node.path"
-                  :key="index"
-          >{{tag.node.id}}</g-link>
-        </li>
-      </ul>
-    </div>
+    <listing></listing>
     <div class="article">
       <h1>{{ $page.blogPost.title }}</h1>
       <span>{{ $page.blogPost.date }}</span>
@@ -23,13 +11,18 @@
 </template>
 
 <script>
-export default {
-  metaInfo () {
-    return {
-      title: this.$page.blogPost.title
+  import Listing from '~/components/listing';
+
+  export default {
+    components: {
+      Listing
+    },
+    metaInfo () {
+      return {
+        title: this.$page.blogPost.title
+      }
     }
   }
-}
 </script>
 
 <page-query>
