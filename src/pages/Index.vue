@@ -1,5 +1,6 @@
 <template>
   <Layout class="home">
+    <listing></listing>
     <ul>
       <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
         <router-link :to="node.path">
@@ -12,6 +13,16 @@
   </Layout>
 </template>
 
+<script>
+  import Listing from '~/components/listing';
+
+  export default {
+    components: {
+      Listing
+    }
+  }
+</script>
+
 <page-query>
   query Home ($page: Int) {
     allBlogPost (page: $page) {
@@ -21,6 +32,14 @@
           title
           date (format: "D MMMM, YYYY")
           description
+          path
+        }
+      }
+    },
+    allTag {
+      edges {
+        node {
+          id
           path
         }
       }

@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <listing></listing>
     <div class="article">
       <h1>{{ $page.blogPost.title }}</h1>
       <span>{{ $page.blogPost.date }}</span>
@@ -10,13 +11,18 @@
 </template>
 
 <script>
-export default {
-  metaInfo () {
-    return {
-      title: this.$page.blogPost.title
+  import Listing from '~/components/listing';
+
+  export default {
+    components: {
+      Listing
+    },
+    metaInfo () {
+      return {
+        title: this.$page.blogPost.title
+      }
     }
   }
-}
 </script>
 
 <page-query>
@@ -26,6 +32,14 @@ export default {
       date (format: "D MMMM, YYYY")
       content
       image
+    },
+    allTag {
+      edges {
+        node {
+          id
+          path
+        }
+      }
     }
   }
 </page-query>
