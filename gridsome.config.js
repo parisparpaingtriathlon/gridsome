@@ -17,6 +17,14 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'member/*.md',
+        typeName: 'Member',
+        route: '/member/:slug'
+      }
     }
   ]
 };

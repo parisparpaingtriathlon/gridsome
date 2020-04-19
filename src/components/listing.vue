@@ -4,6 +4,9 @@
             <li>
                 <g-link  to="/">Home</g-link>
             </li>
+            <li>
+                <g-link  to="/members">Membres</g-link>
+            </li>
             <li v-if="$page.allTag" v-for="(tag, index) in $page.allTag.edges">
                 <g-link
                         :to="tag.node.path"
