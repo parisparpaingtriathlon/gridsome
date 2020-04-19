@@ -1,13 +1,27 @@
 <template>
     <Layout>
-        <h1>Articles Tagged with: {{ $page.tag.title }}</h1>
+        <listing></listing>
         <ul>
             <li v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id">
-                <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
+                <router-link :to="edge.node.path">
+                    <h2 v-html="edge.node.title"/>
+                </router-link>
+                <span v-html="edge.node.date"/>
+                <div v-html="edge.node.description"/>
             </li>
         </ul>
     </Layout>
 </template>
+
+<script>
+    import Listing from '~/components/listing';
+
+    export default {
+        components: {
+            Listing
+        }
+    }
+</script>
 
 <page-query>
   query Tag($id: String) {
@@ -19,6 +33,8 @@
             ... on BlogPost {
               id
               title
+              date (format: "D MMMM, YYYY")
+              description
               path
             }
           }
