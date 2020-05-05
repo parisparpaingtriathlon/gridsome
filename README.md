@@ -8,7 +8,7 @@ To avoid to have a complete CMS, we use the github workflow to add new articles.
 
 ## Production
 
-The website is deployed with Netifly and accessible here https://parisparpaingtriathlon.netlify.com
+The website is deployed with Netifly and accessible here https://parisparpaingtriathlon.netlify.app
 
 ## Development
 
