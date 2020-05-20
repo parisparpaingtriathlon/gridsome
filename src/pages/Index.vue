@@ -1,15 +1,19 @@
 <template>
   <Layout class="home">
     <listing></listing>
-    <ul>
-      <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
+    <div>
+      <div>
+        <h2>Actualités</h2>
+      </div>
+      <div class="news" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
         <router-link :to="node.path">
-          <h2 v-html="node.title"/>
+          <g-image :src="node.image"/>
+          <h3 v-html="node.title"/>
+          <div v-html="node.description"/>
+          <span class="publish_date" v-html="node.date"/>
         </router-link>
-        <span v-html="node.date"/>
-        <div v-html="node.description"/>
-      </li>
-    </ul>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -25,13 +29,14 @@
 
 <page-query>
   query Home ($page: Int) {
-    allBlogPost (page: $page) {
+    allBlogPost (page: $page, perPage: 2) {
       edges {
         node {
           _id
           title
           date (format: "D MMMM, YYYY")
           description
+          image
           path
         }
       }
@@ -52,17 +57,9 @@
     margin-bottom: 70px;
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  ul li {
-    margin-bottom: 20px;
-  }
-
-  ul li a h2 {
+  h3 {
     margin-bottom: 10px;
+    color: red;
   }
 
   span {
@@ -70,12 +67,13 @@
     padding: 0;
   }
 
-  ul li p:first-child {
-    margin-top: 3px;
+  .news {
+    max-width: 300px;
+    float: left;
+    margin: 20px;
   }
 
-  ul li p {
-    margin: 0;
-    line-height: 1.5;
+  .news img{
+    max-width: 300px;
   }
 </style>
