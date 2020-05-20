@@ -5,6 +5,7 @@
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
       </g-link>
     </header>
+    <img src="https://dummyimage.com/900x400/000/fff.jpg&text=PPT+banner" alt="">
     <slot/>
   </div>
 </template>
