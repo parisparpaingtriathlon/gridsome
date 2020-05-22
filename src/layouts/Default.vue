@@ -5,6 +5,7 @@
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
       </g-link>
     </header>
+    <img src="https://dummyimage.com/900x400/000/fff.jpg&text=PPT+banner" alt="">
     <slot/>
   </div>
 </template>
@@ -32,8 +33,12 @@
   }
 
   a {
-    color: red;
+    color: black;
     text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -61,7 +66,7 @@
   }
 
   .layout {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
