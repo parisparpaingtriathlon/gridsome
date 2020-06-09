@@ -3,7 +3,7 @@
     <listing></listing>
     <div>
       <div>
-        <h2>Actualités</h2>
+        <h2>Précemment, au PPT...</h2>
       </div>
       <div class="news" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
         <router-link :to="node.path">
