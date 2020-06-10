@@ -2,16 +2,22 @@
     <div>
         <ul>
             <li>
-                <g-link  to="/">Home</g-link>
+                <g-link  to="/">Accueil</g-link>
             </li>
             <li>
                 <g-link  to="/members">Membres</g-link>
             </li>
-            <li v-if="$page.allTag" v-for="(tag, index) in $page.allTag.edges">
-                <g-link
-                        :to="tag.node.path"
-                        :key="index"
-                >{{tag.node.id}}</g-link>
+            <li>
+                <g-link to="/news">Actualités</g-link>
+            </li>
+            <li>
+                <g-link to="/calendar">Calendrier des courses</g-link>
+            </li>
+            <li>
+                <g-link to="/results">Résultats</g-link>
+            </li>
+            <li>
+                <g-link to="/contact">Contactez-nous</g-link>
             </li>
         </ul>
     </div>
