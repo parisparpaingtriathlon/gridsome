@@ -1,50 +1,35 @@
 <template>
-    <div>
-        <ul>
-            <li>
-                <g-link  to="/">Accueil</g-link>
-            </li>
-            <li>
-                <g-link  to="/members">Membres</g-link>
-            </li>
-            <li>
-                <g-link to="/news">Actualités</g-link>
-            </li>
-            <li>
-                <g-link to="/calendar">Calendrier des courses</g-link>
-            </li>
-            <li>
-                <g-link to="/results">Résultats</g-link>
-            </li>
-            <li>
-                <g-link to="/contact">Contactez-nous</g-link>
-            </li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex justify-content-between">
+                <li class="nav-item active">
+                    <g-link class="nav-link" to="/">Accueil</g-link>
+                </li>
+                <li class="nav-item">
+                    <g-link class="nav-link" to="/members">Members</g-link>
+                </li>
+                <li class="nav-item">
+                    <g-link class="nav-link" to="/news">Actualités</g-link>
+                </li>
+                <li class="nav-item">
+                    <g-link class="nav-link" to="/calendar">Calendrier des courses</g-link>
+                </li>
+                <li class="nav-item">
+                    <g-link class="nav-link" to="/results">Résultats</g-link>
+                </li>
+                <li class="nav-item">
+                    <g-link class="nav-link" to="/contact">Contactez-nous</g-link>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </template>
 
-<style lang="css" scoped>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333333;
-    }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: red;
+<style scoped>
+    ul.navbar-nav {
+        width: 100%;
     }
 </style>
