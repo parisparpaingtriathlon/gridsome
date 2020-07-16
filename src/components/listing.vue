@@ -23,19 +23,6 @@
     </div>
 </template>
 
-<page-query>
-  query {
-    allTag {
-      edges {
-        node {
-          id
-          path
-        }
-      }
-    }
-  }
-</page-query>
-
 <style lang="css" scoped>
     ul {
         list-style-type: none;

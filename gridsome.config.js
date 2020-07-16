@@ -6,16 +6,9 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'blog/*.md',
-        typeName: 'BlogPost',
-        route: '/post/:slug',
-        refs: {
-          tags: {
-            typeName: "Tag",
-            route: "/tag/:id",
-            create: true
-          }
-        }
+        path: 'news/*.md',
+        typeName: 'News',
+        route: '/news/:slug',
       }
     },
     {

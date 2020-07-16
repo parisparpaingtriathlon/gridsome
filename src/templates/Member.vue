@@ -30,14 +30,6 @@
       title
       content
       image
-    },
-    allTag {
-      edges {
-        node {
-          id
-          path
-        }
-      }
     }
   }
 </page-query>

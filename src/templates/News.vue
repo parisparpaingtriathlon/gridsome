@@ -32,14 +32,6 @@
       date (format: "D MMMM, YYYY")
       content
       image
-    },
-    allTag {
-      edges {
-        node {
-          id
-          path
-        }
-      }
     }
   }
 </page-query>
