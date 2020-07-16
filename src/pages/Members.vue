@@ -33,14 +33,6 @@
           path
         }
       }
-    },
-    allTag {
-      edges {
-        node {
-          id
-          path
-        }
-      }
     }
   }
 </page-query>

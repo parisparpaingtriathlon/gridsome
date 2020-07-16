@@ -5,7 +5,7 @@
       <div>
         <h2>Précemment, au PPT...</h2>
       </div>
-      <div class="news" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
+      <div class="news" v-for="{ node } in $page.allNews.edges" :key="node._id">
         <router-link :to="node.path">
           <g-image :src="node.image"/>
           <h3 v-html="node.title"/>
@@ -29,7 +29,7 @@
 
 <page-query>
   query Home ($page: Int) {
-    allBlogPost (page: $page, perPage: 2) {
+    allNews (page: $page, perPage: 2) {
       edges {
         node {
           _id
@@ -37,14 +37,6 @@
           date (format: "D MMMM, YYYY")
           description
           image
-          path
-        }
-      }
-    },
-    allTag {
-      edges {
-        node {
-          id
           path
         }
       }
