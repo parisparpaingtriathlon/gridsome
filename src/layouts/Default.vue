@@ -42,7 +42,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Mali', cursive;
+    font-family: 'Raleway', sans-serif;
   }
 
   h1 {
@@ -54,7 +54,7 @@
   }
 
   body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     font-size: 16px;
     padding: 0;
@@ -79,7 +79,7 @@
 
   .heading {
     margin-bottom: 20px;
-    font-family: 'Mali', cursive;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
   }
 
