@@ -5,6 +5,10 @@ export default function (Vue, { head }) {
 
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Mali:700|Nunito'
+    href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap'
+  })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
   })
 }

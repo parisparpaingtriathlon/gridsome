@@ -3,15 +3,19 @@
     <listing></listing>
     <div>
       <div>
-        <h2>Précemment, au PPT...</h2>
+        <h2>Précédemment, au PPT...</h2>
       </div>
-      <div class="news" v-for="{ node } in $page.allNews.edges" :key="node._id">
-        <router-link :to="node.path">
-          <g-image :src="node.image"/>
-          <h3 v-html="node.title"/>
-          <div v-html="node.description"/>
-          <span class="publish_date" v-html="node.date"/>
-        </router-link>
+      <div class="d-flex justify-content-between">
+        <div class="news" v-for="{ node } in $page.allNews.edges" :key="node._id">
+          <div class="card" style="width: 18rem;">
+            <g-image class="card-img-top" :src="node.image"/>
+            <div class="card-body">
+              <h5 class="card-title" v-html="node.title"/>
+              <p class="card-text" v-html="node.description"/>
+              <router-link :to="node.path" class="btn btn-primary">Voir plus</router-link>
+            </div>
+          </div>
+      </div>
       </div>
     </div>
   </Layout>
