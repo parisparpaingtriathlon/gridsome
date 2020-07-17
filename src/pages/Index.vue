@@ -6,7 +6,7 @@
         <h2>Précédemment, au PPT...</h2>
       </div>
       <div class="d-flex justify-content-between">
-        <div class="news" v-for="{ node } in $page.allNews.edges" :key="node._id">
+        <div class="news" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
           <div class="card" style="width: 18rem;">
             <g-image class="card-img-top" :src="node.image" />
             <div class="card-body">
@@ -33,7 +33,7 @@ export default {
 
 <page-query>
   query Home ($page: Int) {
-    allNews (page: $page, perPage: 2) {
+    allNewsItem (page: $page, perPage: 2) {
       edges {
         node {
           _id

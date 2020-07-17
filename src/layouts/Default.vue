@@ -6,7 +6,6 @@
       </g-link>
     </header>
     <img width="860" height="400" src="../../placeholders/banner/simon-connellan-8bv_BtMLU1I-unsplash.jpg">
-    <!-- 860x400 src="https://dummyimage.com/860x400/000/fff.jpg&text=PPT+banner" alt="" -->
     <slot />
   </div>
 </template>
