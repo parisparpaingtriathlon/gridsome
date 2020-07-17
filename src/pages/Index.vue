@@ -1,13 +1,11 @@
 <template>
   <Layout class="home">
     <listing></listing>
-    <div>
-      <div>
-        <h2>Précédemment, au PPT...</h2>
-      </div>
-      <div class="d-flex justify-content-between">
-        <div class="news" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
-          <div class="card" style="width: 18rem;">
+    <div class="container">
+      <h2>Précédemment, au PPT...</h2>
+      <div class="row d-lg-flex justify-content-around">
+        <div class="news col-sm-10 col-lg-5 offset-lg-1" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+          <div class="card">
             <g-image class="card-img-top" :src="node.image" />
             <div class="card-body">
               <h5 class="card-title" v-html="node.title" />
@@ -49,6 +47,12 @@ export default {
 </page-query>
 
 <style scoped>
+h2 {
+  margin: 2rem 0;
+  color: #FE4365;
+  font-weight: 200;
+}
+
 span {
   font-size: 80%;
   padding: 0;

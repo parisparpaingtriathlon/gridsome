@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h1,
@@ -66,7 +66,8 @@ body {
 }
 
 .heading-link {
-  color: black;
+  color: #FE4365;
+  font-weight: 200;;
 }
 
 .layout {
