@@ -17,7 +17,7 @@
     computed: {
       titleTag() {
         return this.$route.name === "home" ? "h1" : "h6";
-      },
+        },
       config() {
         return config;
       }
