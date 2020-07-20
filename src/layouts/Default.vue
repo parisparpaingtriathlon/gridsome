@@ -5,26 +5,25 @@
         <component :is="titleTag" class="heading">{{ config.siteName }}</component>
       </g-link>
     </header>
-    <img src="https://dummyimage.com/860x400/000/fff.jpg&text=PPT+banner" alt="">
-    <slot/>
+    <img width="860" height="400" src="../../placeholders/banner/simon-connellan-8bv_BtMLU1I-unsplash.jpg">
+    <slot />
   </div>
 </template>
 
 <script>
-  import config from '~/.temp/config.js';
+  import config from "~/.temp/config.js";
 
   export default {
     computed: {
-      titleTag () {
-        return this.$route.name === 'home' ? 'h1' : 'h6'
-      },
-      config () {
-        return config
+      titleTag() {
+        return this.$route.name === "home" ? "h1" : "h6";
+        },
+      config() {
+        return config;
       }
     }
-  }
+  };
 </script>
-
 
 <style lang="css">
   * {
@@ -38,11 +37,11 @@
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 
   h1 {
@@ -54,15 +53,15 @@
   }
 
   body {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 0;
     font-size: 16px;
     padding: 0;
   }
 
   .heading-link {
-    color: black;
-    text-decoration: none;
+    color: #FE4365;
+    font-weight: 200;;
   }
 
   .layout {
@@ -79,13 +78,13 @@
 
   .heading {
     margin-bottom: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: bold;
   }
 
-   .article {
-     margin-top: 15px;
-   }
+  .article {
+    margin-top: 15px;
+  }
 
   .article h1 {
     font-size: 40px;

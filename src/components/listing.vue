@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,5 +31,8 @@
 <style scoped>
     ul.navbar-nav {
         width: 100%;
+    }
+    .navbar {
+        background-color: rgba(254, 67, 101, 0.5);
     }
 </style>

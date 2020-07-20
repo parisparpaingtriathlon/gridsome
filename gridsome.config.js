@@ -7,7 +7,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'news/*.md',
-        typeName: 'News',
+        typeName: 'NewsItem',
         route: '/news/:slug',
       }
     },
