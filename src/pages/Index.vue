@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import Listing from "~/components/listing";
+  import Listing from "~/components/listing";
 
-export default {
-  components: {
-    Listing
-  }
-};
+  export default {
+    components: {
+      Listing
+    }
+  };
 </script>
 
 <page-query>
@@ -47,24 +47,24 @@ export default {
 </page-query>
 
 <style scoped>
-h2 {
-  margin: 2rem 0;
-  color: #FE4365;
-  font-weight: 200;
-}
+  h2 {
+    margin: 2rem 0;
+    color: #FE4365;
+    font-weight: 200;
+  }
 
-span {
-  font-size: 80%;
-  padding: 0;
-}
+  span {
+    font-size: 80%;
+    padding: 0;
+  }
 
-.news {
-  max-width: 300px;
-  float: left;
-  margin: 20px;
-}
+  .news {
+    max-width: 300px;
+    float: left;
+    margin: 20px;
+  }
 
-.news img {
-  max-width: 300px;
-}
+  .news img {
+    max-width: 300px;
+  }
 </style>
