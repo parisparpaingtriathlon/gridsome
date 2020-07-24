@@ -1,8 +1,10 @@
 <template>
   <Layout>
     <listing></listing>
-    <h2>Contactez-nous</h2>
-    <p>Formulaire de contact et coordonnées du club</p>
+    <section class="container">
+      <h2>Contactez-nous</h2>
+      <h3>Envoyez-nous des mots doux.</h3>
+    </section>
   </Layout>
 </template>
 
@@ -15,3 +17,9 @@
     }
   }
 </script>
+
+<style scoped>
+h2, h3 {
+  text-align: center;
+}
+</style>

@@ -1,8 +1,10 @@
 <template>
   <Layout>
     <listing></listing>
-    <h2>Calendar</h2>
-    <p>Calendrier des prochaines courses auxquelles le club participera</p>
+    <section class="container">
+      <h2>Calendar</h2>
+      <h3>Calendrier des prochaines courses auxquelles le club participera</h3>
+    </section>
   </Layout>
 </template>
 
@@ -15,3 +17,9 @@
     }
   }
 </script>
+
+<style scoped>
+h2, h3 {
+  text-align: center;
+}
+</style>

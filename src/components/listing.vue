@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg bg-dark">
         <g-link class="heading-link" :to="{ name: 'home' }">
             <h1>{{ config.siteName }}</h1>
         </g-link>
@@ -48,7 +48,13 @@
     ul.navbar-nav {
         width: 100%;
     }
-    .navbar {
-        background-color: rgba(254, 67, 101, 0.5);
+
+    a:hover {
+        text-decoration: none;
+        color: #FE4365;
+    }
+
+    .nav-link {
+        color: white;
     }
 </style>

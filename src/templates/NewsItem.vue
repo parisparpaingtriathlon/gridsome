@@ -10,7 +10,7 @@
       </ol>
     </nav>
     <article class="container">
-      <div class="article">
+      <div>
         <span>{{ $page.newsItem.date }}</span>
         <h2>{{ $page.newsItem.title }}</h2>
         <p>{{ $page.newsItem.description }}</p>
