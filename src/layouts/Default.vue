@@ -2,24 +2,37 @@
   <div class="layout">
     <slot />
     <footer class="container">
-      <div class="row">
-        <div class="offset-lg-1 col-lg-3">
+      <div class="row footer-listing">
+        <div class="offset-lg-5 col-lg-3">
           <ul>
-            <li>Accueil</li>
-            <li>Actualités</li>
-            <li>Calendrier des courses</li>
-            <li>Résultats et performances</li>
+            <li class="footer-nav-item">
+              <g-link to="/">Accueil</g-link>
+            </li>
+            <li class="footer-nav-item">
+              <g-link to="/news">Actualités</g-link>
+            </li>
+            <li class="footer-nav-item">
+              <g-link to="/calendar">Calendrier des courses</g-link>
+            </li>
+            <li class="footer-nav-item">
+              <g-link to="/results">Résultats et performances</g-link>
+            </li>
           </ul>
         </div>
         <div class="offset-lg-1 col-lg-3">
           <ul>
-            <li>Membres</li>
-            <li>Nous contacter</li>
+            <li class="footer-nav-item">
+              <g-link to="/members">Membres</g-link>
+            </li>
+            <li class="footer-nav-item">
+              <g-link to="/contact">Nous contacter</g-link>
+            </li>
+            <li>Suivez-nous sur Instagram</li>
           </ul>
         </div>
       </div>
       <div>
-        <p class="credits">All rights reserved, built with love by nicoThal + kinedie</p>
+        <p class="footer-credits">All rights reserved, built with love by nicoThal + kinedie</p>
       </div>
     </footer>
   </div>
@@ -55,7 +68,7 @@
     padding: 0;
     position: relative;
     font-size: 16px;
-    padding-bottom: 11em;
+    padding-bottom: 15em;
   }
 
   a {
@@ -129,17 +142,14 @@
       height: 400px;
   }
 
-  .credits {
+  .footer-credits {
     text-align: center;
+    margin-top: 1rem;
   }
 
   .heading-link {
     color: #FE4365;
     font-weight: 200;;
-  }
-
-  .layout {
-    margin-bottom: 50px;
   }
 
   .heading {
