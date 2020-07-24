@@ -1,16 +1,24 @@
 <template>
   <Layout>
     <listing></listing>
-    <h2>Actualités</h2>
-    <p>Blog posts sur l'actualité du club</p>
-    <div class="news" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
-      <router-link :to="node.path">
-        <g-image :src="node.image" />
-        <h3 v-html="node.title"/>
-        <div v-html="node.description"/>
-        <span class="publish_date" v-html="node.date"/>
-      </router-link>
-    </div>
+    <section class="container">
+      <h2>Actualités</h2>
+      <h3>Articles sur l'actualité du club</h3>
+      <div class="row d-lg-flex justify-content-around">
+        <div class="news col-sm-10 col-lg-5" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+          <div>
+            <p class="publish_date" v-html="node.date"/>
+            <g-image class="card-img-top" :src="node.image" />
+            <div>
+              <router-link :to="node.path">
+                <h5 v-html="node.title" />
+                <p v-html="node.description" />
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 </template>
 
@@ -40,3 +48,37 @@
     }
   }
 </page-query>
+
+<style scoped>
+h2, h3 {
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 2.5rem;
+}
+
+h5 {
+  margin-top: 0.8rem;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.news {
+  margin-bottom: 2rem;
+}
+
+.publish_date {
+  margin-bottom: 1rem;
+}
+</style>

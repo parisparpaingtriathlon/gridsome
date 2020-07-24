@@ -5,11 +5,11 @@
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
         <div class="news col-sm-10 col-lg-3" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
-          <div class="card">
+          <div>
+            <p v-html="node.date"/>
             <g-image class="card-img-top" :src="node.image" />
             <div class="card-body">
               <h5 class="card-title" v-html="node.title" />
-              <p class="card-text" v-html="node.description" />
               <router-link :to="node.path" class="btn">Voir plus</router-link>
             </div>
           </div>
@@ -46,7 +46,6 @@
           _id
           title
           date (format: "D MMMM, YYYY")
-          description
           image
           path
         }
@@ -56,14 +55,10 @@
 </page-query>
 
 <style scoped>
-  span {
-    font-size: 80%;
-    padding: 0;
-  }
-
-  .btn {
+ .btn {
     background-color: #FE4365;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
   }
 
   .members {

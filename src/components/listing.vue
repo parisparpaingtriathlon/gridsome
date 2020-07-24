@@ -9,14 +9,14 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex justify-content-end">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <g-link class="nav-link" to="/">Accueil</g-link>
                 </li>
                 <li class="nav-item">
-                    <g-link class="nav-link" to="/members">Members</g-link>
+                    <g-link class="nav-link" to="/news">Actualités</g-link>
                 </li>
                 <li class="nav-item">
-                    <g-link class="nav-link" to="/news">Actualités</g-link>
+                    <g-link class="nav-link" to="/members">Membres</g-link>
                 </li>
                 <li class="nav-item">
                     <g-link class="nav-link" to="/calendar">Calendrier des courses</g-link>
