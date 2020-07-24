@@ -1,10 +1,14 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <g-link class="heading-link" :to="{ name: 'home' }">
+            <h1>{{ config.siteName }}</h1>
+        </g-link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav d-flex justify-content-between">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-flex justify-content-end">
                 <li class="nav-item active">
                     <g-link class="nav-link" to="/">Accueil</g-link>
                 </li>
@@ -27,6 +31,18 @@
         </div>
     </nav>
 </template>
+
+<script>
+  import config from "~/.temp/config.js";
+
+  export default {
+    computed: {
+      config() {
+        return config;
+      }
+    }
+  };
+</script>
 
 <style scoped>
     ul.navbar-nav {

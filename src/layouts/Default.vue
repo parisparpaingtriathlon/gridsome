@@ -1,11 +1,5 @@
 <template>
   <div class="layout">
-    <header>
-      <g-link class="heading-link" :to="{ name: 'home' }">
-        <component :is="titleTag" class="heading">{{ config.siteName }}</component>
-      </g-link>
-    </header>
-    <img class="banner-desktop" src="../../placeholders/banner/simon-connellan-8bv_BtMLU1I-unsplash.jpg">
     <slot />
     <footer class="container">
       <div class="row">
@@ -36,9 +30,6 @@
 
   export default {
     computed: {
-      titleTag() {
-        return this.$route.name === "home" ? "h1" : "h6";
-        },
       config() {
         return config;
       }
@@ -82,7 +73,6 @@
     position: absolute;
     bottom: 0;
     font-weight: 600;
-    max-width: 860px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -93,9 +83,22 @@
     font-size: 48px;
   }
 
+  h2 {
+    margin: 2rem 0;
+    color: #FE4365;
+    font-weight: 200;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
   h6 {
     font-size: 20px;
   }
+
+  /* header {
+    background-image: url("../../placeholders/banner/simon-connellan-8bv_BtMLU1I-unsplash.jpg");
+
+  } */
 
   li {
     list-style-type: none;
@@ -106,7 +109,7 @@
   }
 
   section {
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -136,14 +139,6 @@
   }
 
   .layout {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .layout {
-    margin-top: 30px;
     margin-bottom: 50px;
   }
 
@@ -151,51 +146,5 @@
     margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-  }
-
-  .article {
-    margin-top: 15px;
-  }
-
-  .article h1 {
-    font-size: 40px;
-  }
-
-  .article img {
-    width: 100%;
-    border-radius: 5px;
-  }
-
-  .article a {
-    color: red;
-    text-decoration: underline;
-  }
-
-  .article a:hover {
-    text-decoration: none;
-  }
-
-  .article span {
-    font-size: 80%;
-    margin-bottom: 20px;
-  }
-
-  .article ol, .article ul {
-    list-style-position: outside;
-  }
-
-  .article ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-
-  .article .content p:first-child {
-    margin-top: 15px;
-  }
-
-  .article .content p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1.5;
   }
 </style>

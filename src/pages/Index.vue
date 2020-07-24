@@ -4,7 +4,7 @@
     <section class="container">
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
-        <div class="news col-sm-10 col-lg-5 offset-lg-1" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+        <div class="news col-sm-10 col-lg-3" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
           <div class="card">
             <g-image class="card-img-top" :src="node.image" />
             <div class="card-body">
@@ -40,7 +40,7 @@
 
 <page-query>
   query Home ($page: Int) {
-    allNewsItem (page: $page, perPage: 2) {
+    allNewsItem (page: $page, perPage: 3) {
       edges {
         node {
           _id
@@ -56,12 +56,6 @@
 </page-query>
 
 <style scoped>
-  h2 {
-    margin: 2rem 0;
-    color: #FE4365;
-    font-weight: 200;
-  }
-
   span {
     font-size: 80%;
     padding: 0;
@@ -78,13 +72,11 @@
 
   .news {
     max-width: 500px;
-    float: left;
-    margin: 20px;
   }
 
-  .news img {
+  .card-img-top {
     max-width: 500px;
-    height: 400px;
+    height: 300px;
   }
 
   .card-body {

@@ -5,7 +5,7 @@
     <p>Blog posts sur l'actualité du club</p>
     <div class="news" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
       <router-link :to="node.path">
-        <g-image :src="node.image"  style="max-width: 200px"/>
+        <g-image :src="node.image" />
         <h3 v-html="node.title"/>
         <div v-html="node.description"/>
         <span class="publish_date" v-html="node.date"/>
