@@ -108,11 +108,6 @@
     font-size: 20px;
   }
 
-  /* header {
-    background-image: url("../../placeholders/banner/simon-connellan-8bv_BtMLU1I-unsplash.jpg");
-
-  } */
-
   li {
     list-style-type: none;
   }
