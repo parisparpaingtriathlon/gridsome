@@ -1,8 +1,10 @@
 <template>
   <Layout>
     <listing></listing>
-    <h2>Résultats</h2>
-    <p>Performances du club</p>
+    <section class="container">
+      <h2>Résultats</h2>
+      <h3>Performances du club</h3>
+    </section>
   </Layout>
 </template>
 
@@ -15,3 +17,9 @@
     }
   }
 </script>
+
+<style scoped>
+h2, h3 {
+  text-align: center;
+}
+</style>
