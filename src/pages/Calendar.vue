@@ -2,7 +2,7 @@
   <Layout>
     <listing></listing>
     <section class="container">
-      <h2>Calendar</h2>
+      <h2>Calendrier</h2>
       <h3>Calendrier des prochaines courses auxquelles le club participera</h3>
     </section>
   </Layout>
