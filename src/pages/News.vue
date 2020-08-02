@@ -28,6 +28,9 @@
   export default {
     components: {
       Listing
+    },
+    metaInfo: {
+      title: 'Les actualités du club',
     }
   }
 </script>

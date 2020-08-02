@@ -1,6 +1,5 @@
 module.exports = {
   siteName: `Paris Parpaing Triathlon`,
-  titleTemplate: `%s - PPT`,
 
   plugins: [
     {

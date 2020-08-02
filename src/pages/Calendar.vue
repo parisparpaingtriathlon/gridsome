@@ -14,6 +14,9 @@
   export default {
     components: {
       Listing
+    },
+    metaInfo: {
+      title: 'Calendrier des courses',
     }
   }
 </script>

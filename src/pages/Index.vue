@@ -34,6 +34,9 @@
   export default {
     components: {
       Listing
+    },
+    metaInfo: {
+      title: 'Accueil',
     }
   };
 </script>
