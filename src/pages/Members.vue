@@ -22,6 +22,9 @@
   export default {
     components: {
       Listing
+    },
+    metaInfo: {
+      title: 'Les membres du club',
     }
   }
 </script>

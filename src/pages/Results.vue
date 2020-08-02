@@ -14,6 +14,9 @@
   export default {
     components: {
       Listing
+    },
+    metaInfo: {
+      title: 'Résultats et performances',
     }
   }
 </script>

@@ -15,4 +15,8 @@ export default function (Vue, { head }) {
     rel: 'stylesheet',
     href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
   })
+  head.script.push({
+    src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
+  })
+  head.htmlAttrs = { lang: 'fr' }
 }
