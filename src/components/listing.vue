@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-md bg-dark sticky-top">
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+        <button class="navbar-toggler navbar-dark" data-toggle="collapse" data-target="#collapse_target">
             <span class="navbar-toggler-icon"></span>
         </button>
 
