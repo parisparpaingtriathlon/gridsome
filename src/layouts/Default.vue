@@ -92,10 +92,6 @@
     font-family: "Raleway", sans-serif;
   }
 
-  h1 {
-    font-size: 48px;
-  }
-
   h2 {
     margin: 2rem 0;
     color: #FE4365;
@@ -142,9 +138,9 @@
     margin-top: 1rem;
   }
 
-  .heading-link {
+  .heading-title {
     color: #FE4365;
-    font-weight: 200;;
+    font-size: 30px;
   }
 
   .heading {

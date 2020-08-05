@@ -1,14 +1,15 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <g-link class="heading-link" :to="{ name: 'home' }">
-            <h1>{{ config.siteName }}</h1>
-        </g-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-md bg-dark sticky-top">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto d-flex justify-content-end">
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <a class="navbar-brand" href="#">
+                <img src="../../logo_fond_transparent.png" height="35px">
+            </a>
+            <span class="navbar-text heading-title">{{ config.siteName }}</span>
+            <ul class="navbar-nav d-flex justify-content-end">
                 <li class="nav-item">
                     <g-link class="nav-link" to="/">Accueil</g-link>
                 </li>
