@@ -5,10 +5,9 @@
         </button>
 
         <div class="collapse navbar-collapse" id="collapse_target">
-            <a class="navbar-brand" href="#">
-                <img src="../../logo_fond_transparent.png" height="35px">
-            </a>
-            <span class="navbar-text heading-title">{{ config.siteName }}</span>
+            <g-link class="navbar-brand" to="/">
+                <img src="../../logo_fond_transparent.png" height="45px">
+            </g-link>
             <ul class="navbar-nav d-flex justify-content-end">
                 <li class="nav-item">
                     <g-link class="nav-link" to="/">Accueil</g-link>
@@ -34,15 +33,7 @@
 </template>
 
 <script>
-  import config from "~/.temp/config.js";
-
-  export default {
-    computed: {
-      config() {
-        return config;
-      }
-    }
-  };
+  export default {};
 </script>
 
 <style scoped>

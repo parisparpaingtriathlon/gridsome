@@ -1,6 +1,9 @@
 <template>
   <Layout class="home">
     <listing></listing>
+    <header class="jumbotron">
+      <h1>Bienvenue sur le site officiel du {{ config.siteName }}</h1>
+    </header>
     <section class="container">
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
@@ -29,11 +32,17 @@
 </template>
 
 <script>
+  import config from "~/.temp/config.js";
   import Listing from "~/components/listing";
 
   export default {
     components: {
       Listing
+    },
+    computed: {
+      config() {
+        return config;
+      }
     },
     metaInfo: {
       title: 'Accueil',
@@ -58,6 +67,10 @@
 </page-query>
 
 <style scoped>
+  h1 {
+    text-align: center;
+  }
+
  .btn {
     background-color: #FE4365;
     font-family: 'Montserrat', sans-serif;

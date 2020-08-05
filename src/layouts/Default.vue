@@ -117,13 +117,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    .banner-desktop {
-      display: none !important;
-    }
     footer {
-      display: none !important;
-    }
-    .heading {
       display: none !important;
     }
   }
@@ -136,16 +130,5 @@
   .footer-credits {
     text-align: center;
     margin-top: 1rem;
-  }
-
-  .heading-title {
-    color: #FE4365;
-    font-size: 30px;
-  }
-
-  .heading {
-    margin-bottom: 20px;
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
   }
 </style>
