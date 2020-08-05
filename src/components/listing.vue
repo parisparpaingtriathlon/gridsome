@@ -5,7 +5,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="collapse_target">
-            <g-link class="navbar-brand" to="/">
+            <g-link class="navbar-brand club-logo" to="/">
                 <img src="../../logo_fond_transparent.png" height="45px">
             </g-link>
             <ul class="navbar-nav d-flex justify-content-end">
@@ -37,6 +37,12 @@
 </script>
 
 <style scoped>
+    @media screen and (max-width: 768px) {
+        .club-logo {
+            display: none !important;
+        }
+    }
+
     ul.navbar-nav {
         width: 100%;
     }

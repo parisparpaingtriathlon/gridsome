@@ -71,6 +71,12 @@
     text-align: center;
   }
 
+  @media screen and (max-width: 768px) {
+    .jumbotron {
+      display: none !important;
+    }
+  }
+
  .btn {
     background-color: #FE4365;
     font-family: 'Montserrat', sans-serif;
