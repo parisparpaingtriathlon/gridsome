@@ -48,7 +48,7 @@
   }
 </page-query>
 
-<style>
+<style scoped>
 img {
   width: 860px;
   height: 460px;

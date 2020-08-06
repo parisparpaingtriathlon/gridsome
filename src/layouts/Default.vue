@@ -92,10 +92,6 @@
     font-family: "Raleway", sans-serif;
   }
 
-  h1 {
-    font-size: 48px;
-  }
-
   h2 {
     margin: 2rem 0;
     color: #FE4365;
@@ -121,13 +117,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    .banner-desktop {
-      display: none !important;
-    }
     footer {
-      display: none !important;
-    }
-    .heading {
       display: none !important;
     }
   }
@@ -140,16 +130,5 @@
   .footer-credits {
     text-align: center;
     margin-top: 1rem;
-  }
-
-  .heading-link {
-    color: #FE4365;
-    font-weight: 200;;
-  }
-
-  .heading {
-    margin-bottom: 20px;
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
   }
 </style>
