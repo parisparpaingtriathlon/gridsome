@@ -12,25 +12,25 @@
     <article class="container">
       <div class="row">
         <div class="col-lg-9">
-          <h2>{{ $page.newsItem.title }}</h2>
+          <h2 class="news-item-title">{{ $page.newsItem.title }}</h2>
+          <p class="news-item-info">par {{ $page.newsItem.author ? $page.newsItem.author : "L'équipe du PPT" }} | publié le {{ $page.newsItem.date }}</p>
           <p class="news-item-description">{{ $page.newsItem.description }}</p>
-          <g-image :src="$page.newsItem.image"/>
-          <div class="content" v-html="$page.newsItem.content" />
+          <g-image class="news-item-image" :src="$page.newsItem.image" :alt="$page.newsItem.credits"/>
+          <div class="news-item-content" v-html="$page.newsItem.content" />
         </div>
         <div class="col-lg-3">
-        <p>Publié le {{ $page.newsItem.date }}</p>
-        <p>par Clio</p>
-      </div>
+          <img src="../../fleurs_fond_transparent.png" alt="Dessin de fleurs rouges à pétales blancs cernés de noir."/>
+        </div>
       </div>
     </article>
-    <section class="container">
-      <h3>Autres actualités du Paris Parpaing Triathlon</h3>
+    <section class="container news-preview">
+      <h3 class="news-preview-title">Autres actualités du Paris Parpaing Triathlon</h3>
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-5">
           <img />
           <h4>Hello World Paris Parpaing Triathlon</h4>
         </div>
-        <div class="offset-lg-2 col-lg-4">
+        <div class="offset-lg-2 col-lg-5">
           <img />
           <h4>Hello World Paris Parpaing Triathlon</h4>
         </div>
@@ -48,7 +48,7 @@
     },
     metaInfo () {
       return {
-        title: this.$page.newsItem.title
+        title: this.$page.newsItem.title,
       }
     }
   }
@@ -59,30 +59,53 @@
     newsItem (path: $path) {
       title
       description
-      date (format: "D MMMM, YYYY", locale: "fr")
+      date (format: "D MMMM YYYY", locale: "fr")
       content
       image
       credits
+      author
     }
   }
 </page-query>
 
 <style scoped>
-img {
-  width: 100%;
-  height: 460px;
-}
-
 nav {
   background-color: #fff;
 }
 
+article {
+  border-bottom: 1px solid black;
+  padding-bottom: 5vh;
+}
+
+.news-item-title {
+  font-size: 2.5rem;
+}
+
+.news-item-image {
+  width: 100%;
+  height: 460px;
+  padding: 0 2px;
+}
+
 .news-item-description {
-  margin-bottom: 2rem;
+  margin: 2.5rem 0;
   font-weight: 800;
 }
 
-.content {
+.news-item-content {
   margin-top: 1.5rem;
+}
+
+.news-item-info {
+  text-align: center;
+}
+
+.news-preview {
+  margin-top: 4vh;
+}
+
+.news-preview-title {
+  text-align: center;
 }
 </style>
