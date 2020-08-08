@@ -7,14 +7,15 @@
     <section class="container">
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
-        <div class="news col-sm-10 col-lg-3" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+        <div class="news col-sm-10 col-lg-6" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
           <div>
-            <p v-html="node.date"/>
-            <g-image class="card-img-top" :src="node.image" />
-            <div class="card-body">
-              <h5 class="card-title" v-html="node.title" />
-              <router-link :to="node.path" class="btn">Voir plus</router-link>
-            </div>
+            <router-link :to="node.path">
+              <div class="card-body">
+                <g-image class="card-img-top" :src="node.image" />
+                <h5 class="card-title" v-html="node.title" />
+                <p v-html="node.date"/>
+              </div>
+            </router-link>
           </div>
         </div>
       </div>
@@ -52,12 +53,12 @@
 
 <page-query>
   query Home ($page: Int) {
-    allNewsItem (page: $page, perPage: 3) {
+    allNewsItem (page: $page, perPage: 2) {
       edges {
         node {
           _id
           title
-          date (format: "D MMMM, YYYY", locale: "fr")
+          date (format: "D MMMM YYYY", locale: "fr")
           image
           path
         }
@@ -67,8 +68,16 @@
 </page-query>
 
 <style scoped>
+  h1, h5 {
+    text-transform: uppercase;
+  }
+
   h1 {
     text-align: center;
+  }
+
+  h5 {
+    text-align: left;
   }
 
   @media screen and (max-width: 768px) {
@@ -77,14 +86,10 @@
     }
   }
 
- .btn {
-    background-color: #FE4365;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 1rem;
-  }
-
-  .members {
-    background-color: rgba(254, 67, 101, 0.6);
+  .jumbotron {
+    background-image: url('../../placeholders/banner/simon-connellan-mfN2CYfjQz4-unsplash.jpg');
+    height: 50vh;
+    color: #FE4365;
   }
 
   .news {
@@ -99,4 +104,5 @@
   .card-body {
     max-height: 500px;
   }
+
 </style>
