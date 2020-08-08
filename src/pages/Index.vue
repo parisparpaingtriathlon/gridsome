@@ -57,7 +57,7 @@
         node {
           _id
           title
-          date (format: "D MMMM, YYYY")
+          date (format: "D MMMM, YYYY", locale: "fr")
           image
           path
         }

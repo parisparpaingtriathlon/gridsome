@@ -41,7 +41,7 @@
     newsItem (path: $path) {
       title
       description
-      date (format: "D MMMM, YYYY")
+      date (format: "D MMMM, YYYY", locale: "fr")
       content
       image
     }

@@ -97,7 +97,9 @@
     color: #FE4365;
     font-weight: 200;
     padding-top: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   h6 {
