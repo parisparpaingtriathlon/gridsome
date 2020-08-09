@@ -54,5 +54,6 @@
 
     .nav-link {
         color: white;
+        /* font-family: 'Oswald'; */
     }
 </style>

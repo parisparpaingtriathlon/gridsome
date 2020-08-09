@@ -5,7 +5,7 @@ export default function (Vue, { head }) {
 
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap'
+    href: 'https://fonts.googleapis.com/css2?family=Oswald&display=swap' 
   })
   head.link.push({
     rel: 'stylesheet',

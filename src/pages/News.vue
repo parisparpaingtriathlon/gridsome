@@ -3,21 +3,22 @@
     <listing></listing>
     <section class="container">
       <h2>Actualités</h2>
-      <h3>Articles sur l'actualité du club</h3>
-      <div class="row d-lg-flex justify-content-around">
-        <div class="news col-sm-10 col-lg-5" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
-          <div>
-            <p class="publish_date" v-html="node.date"/>
-            <g-image class="card-img-top" :src="node.image" />
-            <div>
+      <p class="news-introduction">Découvrez les actualités du club :</p>
+      <ul>
+        <li class="container news-list" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+          <div class="row">
+            <div class="col-lg-5 news-item">
               <router-link :to="node.path">
-                <h5 v-html="node.title" />
-                <p v-html="node.description" />
+                <h3 v-html="node.title"/>
+                <p v-html="node.description"/>
               </router-link>
             </div>
+            <div class="offset-lg-1 col-lg-6">
+               <g-image class="news-item-image" :src="node.image" :alt="node.credits" />
+            </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   </Layout>
 </template>
@@ -42,9 +43,9 @@
         node {
           _id
           title
-          date (format: "D MMMM, YYYY")
           description
           image
+          credits
           path
         }
       }
@@ -53,16 +54,16 @@
 </page-query>
 
 <style scoped>
-h2, h3 {
+.news-introduction {
   text-align: center;
 }
 
 h3 {
-  margin-bottom: 2.5rem;
+  text-transform: uppercase;
 }
 
-h5 {
-  margin-top: 0.8rem;
+.news-introduction {
+  font-size: 1.5rem;
 }
 
 a {
@@ -77,11 +78,20 @@ a:visited {
   text-decoration: none;
 }
 
-.news {
-  margin-bottom: 2rem;
+a:hover {
+  color: #FE4365;
 }
 
-.publish_date {
-  margin-bottom: 1rem;
+.news-list {
+  margin-top: 4rem;
+}
+
+.news-item {
+  padding-top: 2vh;
+}
+
+.news-item-image {
+  height: 40vh;
+  width: 100%;
 }
 </style>
