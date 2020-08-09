@@ -19,7 +19,7 @@
           <div class="news-item-content" v-html="$page.newsItem.content" />
         </div>
         <div class="col-lg-3">
-          <img src="../../fleurs_fond_transparent.png" alt="Dessin de fleurs rouges à pétales blancs cernés de noir."/>
+          <img class="ppt-flowers-pattern" src="../../fleurs_fond_transparent.png" alt="Dessin de fleurs rouges à pétales blancs cernés de noir."/>
         </div>
       </div>
     </article>
@@ -107,5 +107,11 @@ article {
 
 .news-preview-title {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .ppt-flowers-pattern {
+    display: none !important;
+  }
 }
 </style>
