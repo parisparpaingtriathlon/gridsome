@@ -4,14 +4,14 @@
     <section class="container">
       <h2>Membres</h2>
       <h3>Découvrez les membres légendaires du PPT.</h3>
-      <ul>
-        <li v-for="{ node } in $page.allMember.edges" :key="node._id">
+      <div class="row">
+        <div class="col-md-3 members-item" v-for="{ node } in $page.allMember.edges" :key="node._id">
           <router-link :to="node.path">
+            <g-image class="members-image" :src="node.image" />
             <h4 v-html="node.title"/>
           </router-link>
-          <div v-html="node.description"/>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
   </Layout>
 </template>
@@ -36,7 +36,7 @@
         node {
           _id
           title
-          description
+          image
           path
         }
       }
@@ -45,11 +45,25 @@
 </page-query>
 
 <style scoped>
-h2, h3 {
-  text-align: center;
-}
+  h2, h3 {
+    text-align: center;
+  }
 
-h3 {
-  margin-bottom: 2.5rem;
-}
+  h3 {
+    margin-bottom: 2.5rem;
+  }
+  .members-image{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:80px;
+    width:160px;
+    height:160px;
+  }
+  .members-item {
+    text-align: center;
+  }
+  .members-image:hover {
+    filter: grayscale(1);
+  }
 </style>

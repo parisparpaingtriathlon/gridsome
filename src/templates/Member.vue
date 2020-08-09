@@ -12,8 +12,10 @@
     <article class="container">
       <div>
         <h2>{{ $page.member.title }}</h2>
-        <g-image :src="$page.member.image"/>
-        <div class="content" v-html="$page.member.content" />
+        <div>
+          <g-image class="member-image" :src="$page.member.image"/>
+          <div class="content" v-html="$page.member.content" />
+        </div>
       </div>
     </article>
   </Layout>
@@ -43,3 +45,13 @@
     }
   }
 </page-query>
+
+<style scoped>
+  .member-image {
+    width: auto;
+    height: auto;
+    max-width: 260px;
+    float: left;
+    margin-right: 10px;
+  }
+</style>
