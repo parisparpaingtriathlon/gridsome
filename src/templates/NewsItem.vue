@@ -129,7 +129,7 @@ article {
   border-radius: 2%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
   .ppt-flowers-pattern {
     display: none !important;
   }
