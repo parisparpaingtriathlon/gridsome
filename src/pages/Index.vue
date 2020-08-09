@@ -120,6 +120,11 @@
   .card-img-top {
     max-width: 500px;
     height: 300px;
+    border-radius: 2%;
+  }
+
+  .card-img-top:hover {
+    filter: grayscale(1);
   }
 
   .card-body {
