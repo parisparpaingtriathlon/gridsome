@@ -26,13 +26,11 @@
     <section class="container news-preview">
       <h3 class="news-preview-title">Autres actualités du Paris Parpaing Triathlon</h3>
       <div class="row">
-        <div class="col-lg-5">
-          <img />
-          <h4>Hello World Paris Parpaing Triathlon</h4>
-        </div>
-        <div class="offset-lg-2 col-lg-5">
-          <img />
-          <h4>Hello World Paris Parpaing Triathlon</h4>
+        <div class="col-lg-5" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+          <router-link :to="node.path">
+            <h4 class="news-item-preview-title" v-html="node.title" />
+            <g-image class="news-item-preview-img" :src="node.image" />
+          </router-link>
         </div>
       </div>
     </section>
@@ -55,7 +53,7 @@
 </script>
 
 <page-query>
-  query NewsItem ($path: String!) {
+  query ($path: String!, $page: Int) {
     newsItem (path: $path) {
       title
       description
@@ -64,6 +62,17 @@
       image
       credits
       author
+    }
+    allNewsItem (page: $page, perPage: 2) {
+      edges {
+        node {
+          _id
+          title
+          date (format: "D MMMM YYYY", locale: "fr")
+          image
+          path
+        }
+      }
     }
   }
 </page-query>
@@ -107,6 +116,17 @@ article {
 
 .news-preview-title {
   text-align: center;
+  margin-bottom: 4vh;
+}
+
+.news-item-preview-title {
+  min-height: 8vh;
+}
+
+.news-item-preview-img {
+  width: 100%;
+  height: 25vh;
+  border-radius: 2%;
 }
 
 @media screen and (max-width: 768px) {

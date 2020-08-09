@@ -8,14 +8,12 @@
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
         <div class="news col-sm-10 col-lg-6" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
-          <div>
-            <div class="card-body">
-              <router-link class="news-preview" :to="node.path">
-                <g-image class="card-img-top" :src="node.image" />
-                <h5 class="card-title" v-html="node.title" />
-              </router-link>
-              <p class="news-preview-date" v-html="node.date"/>
-            </div>
+          <div class="card-body">
+            <router-link class="news-preview" :to="node.path">
+              <g-image class="card-img-top" :src="node.image" />
+              <h5 class="card-title" v-html="node.title" />
+            </router-link>
+            <p class="news-preview-date" v-html="node.date"/>
           </div>
         </div>
       </div>
@@ -120,7 +118,7 @@
   .card-img-top {
     max-width: 500px;
     height: 300px;
-    border-radius: 2%;
+    border-radius: 3%;
   }
 
   .card-img-top:hover {
