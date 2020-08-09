@@ -88,12 +88,6 @@
     padding-bottom: 3rem;
   }
 
-  @media screen and (max-width: 768px) {
-    footer {
-      display: none !important;
-    }
-  }
-
   .footer-credits {
     text-align: center;
     margin-top: 1rem;
