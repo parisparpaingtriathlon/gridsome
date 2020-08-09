@@ -9,13 +9,13 @@
       <div class="row d-lg-flex justify-content-around">
         <div class="news col-sm-10 col-lg-6" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
           <div>
-            <router-link :to="node.path">
-              <div class="card-body">
+            <div class="card-body">
+              <router-link class="news-preview" :to="node.path">
                 <g-image class="card-img-top" :src="node.image" />
                 <h5 class="card-title" v-html="node.title" />
-                <p v-html="node.date"/>
-              </div>
-            </router-link>
+              </router-link>
+              <p class="news-preview-date" v-html="node.date"/>
+            </div>
           </div>
         </div>
       </div>
@@ -94,6 +94,27 @@
 
   .news {
     max-width: 500px;
+  }
+
+  .news-preview, .news-preview-date {
+    color: black;
+  }
+
+  .news-preview:link {
+    text-decoration: none;
+  }
+
+  .news-preview:visited {
+    text-decoration: none;
+  }
+
+  .news-preview:hover {
+    color: #FE4365;
+    /* text-decoration: none; */
+  }
+
+  .card-title {
+    padding-top: 14px;
   }
 
   .card-img-top {
