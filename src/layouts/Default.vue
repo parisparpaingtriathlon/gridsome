@@ -1,39 +1,8 @@
 <template>
   <div class="layout">
     <slot />
-    <footer class="container">
-      <div class="row footer-listing">
-        <div class="offset-lg-5 col-lg-3">
-          <ul>
-            <li class="footer-nav-item">
-              <g-link to="/">Accueil</g-link>
-            </li>
-            <li class="footer-nav-item">
-              <g-link to="/news">Actualités</g-link>
-            </li>
-            <li class="footer-nav-item">
-              <g-link to="/calendar">Calendrier des courses</g-link>
-            </li>
-            <li class="footer-nav-item">
-              <g-link to="/results">Résultats et performances</g-link>
-            </li>
-          </ul>
-        </div>
-        <div class="offset-lg-1 col-lg-3">
-          <ul>
-            <li class="footer-nav-item">
-              <g-link to="/members">Membres</g-link>
-            </li>
-            <li class="footer-nav-item">
-              <g-link to="/contact">Nous contacter</g-link>
-            </li>
-            <li>Suivez-nous sur Instagram</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <p class="footer-credits">All rights reserved, built with love by nicoThal + kinedie</p>
-      </div>
+    <footer>
+        <p class="footer-credits">All rights reserved, built with love by nicoThal + kinedie | contact@parisparpaingtriathlon.com </p>
     </footer>
   </div>
 </template>
@@ -86,6 +55,7 @@
     position: absolute;
     bottom: 0;
     font-weight: 600;
+    background-color: lightgrey;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -122,11 +92,6 @@
     footer {
       display: none !important;
     }
-  }
-
-  .banner-desktop {
-      width: 860px;
-      height: 400px;
   }
 
   .footer-credits {
