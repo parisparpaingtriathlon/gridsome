@@ -93,5 +93,6 @@ a:hover {
 .news-item-image {
   height: 40vh;
   width: 100%;
+  border-radius: 3%;
 }
 </style>

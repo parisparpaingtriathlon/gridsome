@@ -95,6 +95,7 @@ article {
   width: 100%;
   height: 460px;
   padding: 0 2px;
+  border-radius: 3%;
 }
 
 .news-item-description {
