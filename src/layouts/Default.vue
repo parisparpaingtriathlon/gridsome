@@ -20,8 +20,16 @@
 </script>
 
 <style lang="css">
-  html {
+  html, body {
     height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
   }
 
   * {
@@ -29,15 +37,6 @@
     padding: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
-
-  body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    font-size: 16px;
-    padding-bottom: 15em;
   }
 
   a {
@@ -52,9 +51,7 @@
   footer {
     padding-top: 2rem;
     padding-bottom: 1rem;
-    position: absolute;
     bottom: 0;
-    font-weight: 600;
     background-color: lightgrey;
   }
 
