@@ -3,13 +3,13 @@
     <listing></listing>
     <section class="container">
       <h2>Actualités</h2>
-      <p class="news-introduction">Découvrez les actualités du club :</p>
+      <h3>Des courses. Des trips. Et plein d'autres aventures.</h3>
       <ul>
         <li class="container news-list" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
           <div class="row">
             <div class="col-lg-5 news-item">
               <router-link :to="node.path">
-                <h3 v-html="node.title"/>
+                <h4 class="news-item-title" v-html="node.title"/>
                 <p v-html="node.description"/>
               </router-link>
             </div>
@@ -54,11 +54,12 @@
 </page-query>
 
 <style scoped>
-.news-introduction {
+h3 {
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
-h3 {
+.news-item-title {
   text-transform: uppercase;
 }
 
@@ -93,5 +94,6 @@ a:hover {
 .news-item-image {
   height: 40vh;
   width: 100%;
+  border-radius: 3%;
 }
 </style>

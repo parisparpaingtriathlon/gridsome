@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb d-flex justify-content-start">
         <li class="breadcrumb-item" aria-current="page">
-          <g-link to="/news">Retour vers la liste des Actualités</g-link>
+          <g-link class="back-to-news" to="/news">Retour vers la liste des Actualités</g-link>
         </li>
         <li class="breadcrumb-item active" aria-current="page">{{ $page.newsItem.title}}</li>
       </ol>
@@ -26,8 +26,8 @@
     <section class="container news-preview">
       <h3 class="news-preview-title">Autres actualités du Paris Parpaing Triathlon</h3>
       <div class="row">
-        <div class="col-lg-5" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
-          <router-link :to="node.path">
+        <div class="col-lg-4" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+          <router-link :to="node.path" class="news-item-preview-link">
             <h4 class="news-item-preview-title" v-html="node.title" />
             <g-image class="news-item-preview-img" :src="node.image" />
           </router-link>
@@ -63,7 +63,7 @@
       credits
       author
     }
-    allNewsItem (page: $page, perPage: 2) {
+    allNewsItem (page: $page, perPage: 3) {
       edges {
         node {
           _id
@@ -82,9 +82,27 @@ nav {
   background-color: #fff;
 }
 
-article {
-  border-bottom: 1px solid black;
-  padding-bottom: 5vh;
+@media screen and (min-width: 991px) {
+  article {
+    border-bottom: 1px solid #f4ece9;
+    padding-bottom: 5vh;
+  }
+}
+
+.back-to-news {
+  color: #000;
+}
+
+.back-to-news:link {
+  text-decoration: underline;
+}
+
+.back-to-news:visited {
+  text-decoration: none;
+}
+
+.back-to-news:hover {
+  color: #FE4365;
 }
 
 .news-item-title {
@@ -95,6 +113,7 @@ article {
   width: 100%;
   height: 460px;
   padding: 0 2px;
+  border-radius: 3%;
 }
 
 .news-item-description {
@@ -111,22 +130,40 @@ article {
 }
 
 .news-preview {
-  margin-top: 4vh;
+  margin-top: 5vh;
 }
 
 .news-preview-title {
   text-align: center;
-  margin-bottom: 4vh;
+  margin-bottom: 7vh;
+}
+
+.news-item-preview-link {
+  text-decoration: none;
 }
 
 .news-item-preview-title {
+  color: #000;
+  text-transform: uppercase;
   min-height: 8vh;
+}
+
+.news-item-preview-title:hover {
+  color: #FE4365;
+}
+
+.news-item-preview-title:visited {
+  text-decoration: none;
 }
 
 .news-item-preview-img {
   width: 100%;
   height: 25vh;
   border-radius: 2%;
+}
+
+.news-item-preview-img:hover {
+  filter: grayscale(1);
 }
 
 @media screen and (max-width: 1020px) {

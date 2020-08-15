@@ -4,10 +4,10 @@
     <header class="jumbotron">
       <h1>Bienvenue sur le site officiel du {{ config.siteName }}</h1>
     </header>
-    <section class="container">
+    <section class="container news">
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
-        <div class="news col-sm-10 col-lg-6" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
+        <div class="single-news col-sm-10 col-lg-6" v-for="{ node } in $page.allNewsItem.edges" :key="node._id">
           <div class="card-body">
             <router-link class="news-preview" :to="node.path">
               <g-image class="card-img-top" :src="node.image" />
@@ -84,13 +84,19 @@
     }
   }
 
+  @media screen and (min-width: 991px) {
+    .news {
+      border-bottom: 1px solid #f4ece9;
+    }
+  }
+
   .jumbotron {
     background-image: url('../../placeholders/banner/simon-connellan-mfN2CYfjQz4-unsplash.jpg');
     height: 50vh;
     color: #FE4365;
   }
 
-  .news {
+  .single-news {
     max-width: 500px;
   }
 
@@ -108,7 +114,6 @@
 
   .news-preview:hover {
     color: #FE4365;
-    /* text-decoration: none; */
   }
 
   .card-title {

@@ -52,6 +52,7 @@
   h3 {
     margin-bottom: 2.5rem;
   }
+
   .members-image{
     overflow:hidden;
     -webkit-border-radius:50px;
