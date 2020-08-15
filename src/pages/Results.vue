@@ -2,7 +2,7 @@
   <Layout>
     <listing></listing>
     <section class="container">
-      <h2>Résultats</h2>
+      <h2>Performances</h2>
       <h3>Performances du club</h3>
     </section>
   </Layout>
@@ -16,7 +16,7 @@
       Listing
     },
     metaInfo: {
-      title: 'Résultats et performances',
+      title: 'Performances',
     }
   }
 </script>

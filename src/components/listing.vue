@@ -18,11 +18,14 @@
                 <li class="nav-item">
                     <g-link class="nav-link" to="/members">Membres</g-link>
                 </li>
-                <li class="nav-item">
-                    <g-link class="nav-link" to="/calendar">Calendrier des courses</g-link>
-                </li>
-                <li class="nav-item">
-                    <g-link class="nav-link" to="/results">Résultats</g-link>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <g-link class="dropdown-item" to="/calendar">Calendrier des courses</g-link>
+                        <g-link class="dropdown-item" to="/results">Performances</g-link>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <g-link class="nav-link" to="/contact">Contactez-nous</g-link>
@@ -55,5 +58,10 @@
     .nav-link {
         color: white;
         /* font-family: 'Oswald'; */
+    }
+
+    .dropdown-item:active, .dropdown-item.active {
+        background-color: #FE4365;
+        color: #fff;
     }
 </style>
