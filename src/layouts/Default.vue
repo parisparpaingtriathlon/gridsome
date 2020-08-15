@@ -2,7 +2,7 @@
   <div class="layout">
     <slot />
     <footer>
-        <p class="footer-credits">All rights reserved, built with love by nicoThal + kinedie | contact@parisparpaingtriathlon.com </p>
+        <p class="footer-credits">All rights reserved, built with love by nicoThal + kinedie | contact@parisparpaingtriathlon.com | <a href="#">Mentions légales</a></p>
     </footer>
   </div>
 </template>
@@ -52,7 +52,8 @@
     padding-top: 2rem;
     padding-bottom: 1rem;
     bottom: 0;
-    background-color: lightgrey;
+    background-color: #343a40;
+    color: #fff;
   }
 
   h1, h2, h3, h4, h5, h6 {
