@@ -26,7 +26,7 @@
         </div>
          <div class="form-group row">
         <div class="col-sm-12 validation-button">
-          <button type="submit" class="btn btn-outline-secondary btn-md">Envoyer</button>
+          <button type="submit" class="btn btn-outline-secondary btn-md" disabled>Envoyer</button>
         </div>
       </div>
       </form>
