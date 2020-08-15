@@ -108,7 +108,6 @@
 
   .news-preview:hover {
     color: #FE4365;
-    /* text-decoration: none; */
   }
 
   .card-title {

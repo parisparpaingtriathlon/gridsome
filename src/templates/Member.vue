@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb d-flex justify-content-start">
         <li class="breadcrumb-item" aria-current="page">
-          <g-link to="/members">Membres</g-link>
+          <g-link class="back-to-members" to="/members">Membres</g-link>
         </li>
         <li class="breadcrumb-item active" aria-current="page">{{ $page.member.title}}</li>
       </ol>
@@ -47,6 +47,22 @@
 </page-query>
 
 <style scoped>
+  .back-to-members {
+    color: #000;
+  }
+
+  .back-to-members:link {
+    text-decoration: underline;
+  }
+
+  .back-to-members:visited {
+    text-decoration: none;
+  }
+
+  .back-to-members:hover {
+    color: #FE4365;
+  }
+
   .member-image {
     width: auto;
     height: auto;
