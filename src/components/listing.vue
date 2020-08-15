@@ -57,11 +57,10 @@
 
     .nav-link {
         color: white;
-        /* font-family: 'Oswald'; */
     }
 
     .dropdown-item:active, .dropdown-item.active {
-        background-color: #FE4365;
+        background-color: rgba(254,67,101, 0.8);
         color: #fff;
     }
 </style>

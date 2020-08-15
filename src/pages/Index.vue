@@ -19,13 +19,21 @@
       </div>
     </section>
     <section class="container">
-      <h2>Calendrier des courses et résultats</h2>
-      <p>Consultez le calendrier des courses pour savoir où nous trouver.</p>
-      <p>Pour accéder aux performances du club, cliquez ici.</p>
-    </section>
-    <section class="container members">
-      <h2>Membres</h2>
-      <p>Découvrez les athlètes derrière la légende du Parpaing.</p>
+      <div class="row">
+        <div class="col-lg-5">
+          <h2>Social PPT</h2>
+          <p>Le Paris Parpaing Triathlon, ou PPT, raconte sa légende sur les réseaux sociaux. Retrouvez-nous sur Instagram.</p>
+          <a class="social-ppt-link" href="https://www.instagram.com/parisparpaingtriathlon/" target="_blank">
+            <div class="social-ppt-img">
+              <p class="social-ppt-legend">Instagram</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-7">
+          <h2>Calendrier des courses et résultats</h2>
+          <p></p>
+        </div>
+      </div>
     </section>
   </Layout>
 </template>
@@ -84,12 +92,6 @@
     }
   }
 
-  @media screen and (min-width: 991px) {
-    .news {
-      border-bottom: 1px solid #f4ece9;
-    }
-  }
-
   .jumbotron {
     background-image: url('../../placeholders/banner/simon-connellan-mfN2CYfjQz4-unsplash.jpg');
     height: 50vh;
@@ -134,4 +136,32 @@
     max-height: 500px;
   }
 
+  .social-ppt-link {
+    color: #343a40;
+  }
+
+  .social-ppt-link:hover {
+    text-decoration: none;
+  }
+
+  .social-ppt-img {
+    border-radius: 3%;
+    background-color: #FE4365;
+    height: 300px;
+    width: 100%;
+  }
+
+  .social-ppt-legend {
+    text-align: center;
+    white-space: nowrap;
+    line-height: 300px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: transform .2s;
+  }
+
+  .social-ppt-legend:hover {
+    transform: scale(1.2);
+  }
 </style>
