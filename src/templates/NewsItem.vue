@@ -82,9 +82,11 @@ nav {
   background-color: #fff;
 }
 
-article {
-  border-bottom: 1px solid #f4ece9;
-  padding-bottom: 5vh;
+@media screen and (min-width: 991px) {
+  article {
+    border-bottom: 1px solid #f4ece9;
+    padding-bottom: 5vh;
+  }
 }
 
 .back-to-news {
