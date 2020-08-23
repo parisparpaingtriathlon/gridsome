@@ -55,8 +55,8 @@
 
   .members-image{
     overflow:hidden;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
+    -webkit-border-radius:80px;
+    -moz-border-radius:80px;
     border-radius:80px;
     width:160px;
     height:160px;
