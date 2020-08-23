@@ -4,6 +4,20 @@
     <header class="jumbotron">
       <h1>Bienvenue sur le site officiel du {{ config.siteName }}</h1>
     </header>
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <p>Basé dans la capitale, le Paris Parpaing Triathlon a été créé en 2018 par des amatrices et des amateurs de sport.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="../../logo_fond_transparent.png" height="275px">
+          <p style="text-align: center;">"Un pour tous, tous parpaing"</p>
+        </div>
+        <div class="col-lg-4">
+          <p style="text-align: right;">Le club participe à des compétitions dans tout l'Hexagone.</p>
+        </div>
+      </div>
+    </section>
     <section class="container news">
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
