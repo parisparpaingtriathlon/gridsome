@@ -20,8 +20,7 @@
       <div class="row">
         <div class="offset-lg-5 col-lg-4">
           <g-link to="/news">
-            <!-- <button class="btn-show-more-news">Voir plus d'actualités</button> -->
-            <button class="ripple">Voir plus d'actualités</button>
+            <button class="btn-show-more-news">Voir plus d'actualités</button>
           </g-link>
         </div>
       </div>
@@ -126,6 +125,35 @@
     color: #FE4365;
   }
 
+  button {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1.9px solid #FE4365;
+    color: #FE4365;
+    background-color: #fff;
+    outline: none;
+  }
+
+  .btn-show-more-news {
+    background-position: center;
+    transition: background 0.8s;
+  }
+
+  .btn-show-more-news:hover {
+    background: #fe7b93 radial-gradient(circle, transparent 1%, #fe7b93 1%) center/15000%;
+    color: #fff;
+  }
+
+  .btn-show-more-news:active {
+    background-color: #fea1b2;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
   .card-title {
     padding-top: 14px;
   }
@@ -175,35 +203,4 @@
   .social-ppt-legend:hover {
     transform: scale(1.2);
   }
-
-  /* Ripple effect */
-.ripple {
-  background-position: center;
-  transition: background 0.8s;
-}
-.ripple:hover {
-  background: #fe7b93 radial-gradient(circle, transparent 1%, #fe7b93 1%) center/15000%;
-  color: #fff;
-}
-.ripple:active {
-  background-color: #fea1b2;
-  background-size: 100%;
-  transition: background 0s;
-}
-
-/* Button style */
-button {
-  border: none;
-  font-family: 'Montserrat', sans-serif;
-  border-radius: 8px;
-  padding: 12px 18px;
-  font-size: 16px;
-  cursor: pointer;
-  border: 1.9px solid #FE4365;
-    color: #FE4365;
-    background-color: #fff;
-  /* color: white;
-  background-color: #FE4365; */
-  outline: none;
-}
 </style>
