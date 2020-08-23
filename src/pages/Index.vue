@@ -126,6 +126,8 @@
     max-width: 500px;
     height: 300px;
     border-radius: 3%;
+    -webkit-border-radius:3%;
+    -moz-border-radius:3%;
   }
 
   .card-img-top:hover {

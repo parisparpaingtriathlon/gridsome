@@ -95,5 +95,7 @@ a:hover {
   height: 40vh;
   width: 100%;
   border-radius: 3%;
+  -webkit-border-radius:3%;
+  -moz-border-radius:3%;
 }
 </style>

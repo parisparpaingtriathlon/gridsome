@@ -61,9 +61,11 @@
     width:160px;
     height:160px;
   }
+
   .members-item {
     text-align: center;
   }
+
   .members-image:hover {
     filter: grayscale(1);
   }
