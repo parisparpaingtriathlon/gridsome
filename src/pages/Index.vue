@@ -34,7 +34,7 @@
       <div class="row">
         <div class="offset-lg-5 col-lg-4">
           <g-link to="/news">
-            <button class="btn-show-more-news">Voir plus d'actualités</button>
+            <button class="btn-show-more">Voir plus d'actualités</button>
           </g-link>
         </div>
       </div>
@@ -50,9 +50,20 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-7">
+        <div class="offset-lg-1 col-lg-6">
           <h2>Calendrier des courses et résultats</h2>
-          <p></p>
+          <div>
+            <p>Vous vous demandez où nous trouver ? Au Polygone de Vincennes pour nos entraînements de cyclisme. Nous courons sur les quais de Seine, ou aux Buttes Chaumont. Nous flottons dans différentes piscines parisiennes. Et nous rencontrons la communauté des triathlètes lors de superbes courses.</p>
+            <g-link to="/calendar">
+              <button class="btn-show-more">Voir le calendrier des courses</button>
+            </g-link>
+          </div>
+          <div style="padding-top: 4vh;">
+            <p>Retrouvez les records des membres du PPT.</p>
+            <g-link to="/results">
+              <button class="btn-show-more">Voir les performances du club</button>
+            </g-link>
+          </div>
         </div>
       </div>
     </section>
@@ -152,17 +163,17 @@
     outline: none;
   }
 
-  .btn-show-more-news {
+  .btn-show-more {
     background-position: center;
     transition: background 0.8s;
   }
 
-  .btn-show-more-news:hover {
+  .btn-show-more:hover {
     background: #fe7b93 radial-gradient(circle, transparent 1%, #fe7b93 1%) center/15000%;
     color: #fff;
   }
 
-  .btn-show-more-news:active {
+  .btn-show-more:active {
     background-color: #fea1b2;
     background-size: 100%;
     transition: background 0s;
