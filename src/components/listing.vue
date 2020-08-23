@@ -28,7 +28,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <g-link class="nav-link" to="/contact">Contactez-nous</g-link>
+                    <a class="nav-link" href="https://www.instagram.com/parisparpaingtriathlon/" target="_blank">Instagram</a>
                 </li>
             </ul>
         </div>
