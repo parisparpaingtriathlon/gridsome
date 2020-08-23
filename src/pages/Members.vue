@@ -53,6 +53,11 @@
     margin-bottom: 2.5rem;
   }
 
+  .row {
+    margin-top: 10vh;
+    min-height: 45vh;
+  }
+
   .members-image{
     overflow:hidden;
     -webkit-border-radius:80px;

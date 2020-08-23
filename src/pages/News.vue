@@ -59,6 +59,10 @@ h3 {
   text-align: center;
 }
 
+ul {
+  min-height: 45vh;
+}
+
 .news-item-title {
   text-transform: uppercase;
 }
