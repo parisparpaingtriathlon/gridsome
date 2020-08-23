@@ -25,7 +25,7 @@
           <p>Le Paris Parpaing Triathlon, ou PPT, raconte sa légende sur les réseaux sociaux. Retrouvez-nous sur Instagram.</p>
           <a class="social-ppt-link" href="https://www.instagram.com/parisparpaingtriathlon/" target="_blank">
             <div class="social-ppt-img">
-              <p class="social-ppt-legend">Instagram</p>
+              <p class="social-ppt-legend">Le compte Instagram du club <i class="fa fa-external-link" aria-hidden="true"></i></p>
             </div>
           </a>
         </div>

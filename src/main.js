@@ -36,4 +36,7 @@ export default function (Vue, { head }) {
     crossorigin: 'anonymous'
   })
   head.htmlAttrs = { lang: 'fr' }
+  head.script.push({
+    src:'https://use.fontawesome.com/a8de0c6a5c.js'
+  })
 }
