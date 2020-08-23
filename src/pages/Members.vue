@@ -5,9 +5,9 @@
       <h2>Membres</h2>
       <h3>Découvrez les membres légendaires du PPT.</h3>
       <div class="row">
-        <div class="col-md-3 members-item" v-for="{ node } in $page.allMember.edges" :key="node._id">
-          <router-link :to="node.path">
-            <g-image class="members-image" :src="node.image" />
+        <div class="col-md-3 member-item" v-for="{ node } in $page.allMember.edges" :key="node._id">
+          <router-link :to="node.path" class="member-link">
+            <g-image class="member-image" :src="node.image" />
             <h4 v-html="node.title"/>
           </router-link>
         </div>
@@ -53,18 +53,38 @@
     margin-bottom: 2.5rem;
   }
 
-  .members-image{
+  .row {
+    min-height: 45vh;
+  }
+
+  .member-item {
+    text-align: center;
+    margin-top: 8vh;
+  }
+
+  .member-link {
+    text-decoration: none;
+    color: #343a40;
+  }
+
+  .member-link > h4:hover {
+    color: #FE4365;
+  }
+
+  h4 {
+    margin-top: 18px;
+  }
+
+  .member-image{
     overflow:hidden;
-    -webkit-border-radius:50px;
-    -moz-border-radius:50px;
+    -webkit-border-radius:80px;
+    -moz-border-radius:80px;
     border-radius:80px;
     width:160px;
     height:160px;
   }
-  .members-item {
-    text-align: center;
-  }
-  .members-image:hover {
+
+  .member-image:hover {
     filter: grayscale(1);
   }
 </style>

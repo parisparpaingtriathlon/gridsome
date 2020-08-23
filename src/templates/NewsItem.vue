@@ -114,6 +114,8 @@ nav {
   height: 460px;
   padding: 0 2px;
   border-radius: 3%;
+  -webkit-border-radius:3%;
+  -moz-border-radius:3%;
 }
 
 .news-item-description {
@@ -160,6 +162,8 @@ nav {
   width: 100%;
   height: 25vh;
   border-radius: 2%;
+  -webkit-border-radius:2%;
+  -moz-border-radius:2%;
 }
 
 .news-item-preview-img:hover {

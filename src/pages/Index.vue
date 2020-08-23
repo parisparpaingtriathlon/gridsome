@@ -4,6 +4,20 @@
     <header class="jumbotron">
       <h1>Bienvenue sur le site officiel du {{ config.siteName }}</h1>
     </header>
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <p>Basé dans la capitale, le Paris Parpaing Triathlon a été créé en 2018 par des amatrices et des amateurs de sport.</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="../../logo_fond_transparent.png" height="275px">
+          <p style="text-align: center;">"Un pour tous, tous parpaing"</p>
+        </div>
+        <div class="col-lg-4">
+          <p style="text-align: right;">Le club participe à des compétitions dans tout l'Hexagone.</p>
+        </div>
+      </div>
+    </section>
     <section class="container news">
       <h2>Précédemment, au PPT...</h2>
       <div class="row d-lg-flex justify-content-around">
@@ -13,19 +27,45 @@
               <g-image class="card-img-top" :src="node.image" />
               <h5 class="card-title" v-html="node.title" />
             </router-link>
-            <p class="news-preview-date" v-html="node.date"/>
+            <!-- <p class="news-preview-date" v-html="node.date"/> -->
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-lg-5 col-lg-4">
+          <g-link to="/news">
+            <button class="btn-show-more">Voir plus d'actualités</button>
+          </g-link>
         </div>
       </div>
     </section>
     <section class="container">
-      <h2>Calendrier des courses et résultats</h2>
-      <p>Consultez le calendrier des courses pour savoir où nous trouver.</p>
-      <p>Pour accéder aux performances du club, cliquez ici.</p>
-    </section>
-    <section class="container members">
-      <h2>Membres</h2>
-      <p>Découvrez les athlètes derrière la légende du Parpaing.</p>
+      <div class="row">
+        <div class="col-lg-5">
+          <h2>Social PPT</h2>
+          <p>Le Paris Parpaing Triathlon, ou PPT, raconte sa légende sur les réseaux sociaux. Retrouvez-nous sur Instagram.</p>
+          <a class="social-ppt-link" href="https://www.instagram.com/parisparpaingtriathlon/" target="_blank">
+            <div class="social-ppt-img">
+              <p class="social-ppt-legend">Le compte Instagram du club <i class="fa fa-external-link" aria-hidden="true"></i></p>
+            </div>
+          </a>
+        </div>
+        <div class="offset-lg-1 col-lg-6">
+          <h2>Calendrier des courses et résultats</h2>
+          <div>
+            <p>Vous vous demandez où nous trouver ? Au Polygone de Vincennes pour nos entraînements de cyclisme. Nous courons sur les quais de Seine, ou aux Buttes Chaumont. Nous flottons dans différentes piscines parisiennes. Et nous rencontrons la communauté des triathlètes lors de superbes courses.</p>
+            <g-link to="/calendar">
+              <button class="btn-show-more">Voir le calendrier des courses</button>
+            </g-link>
+          </div>
+          <div style="padding-top: 4vh;">
+            <p>Retrouvez les records des membres du PPT.</p>
+            <g-link to="/results">
+              <button class="btn-show-more">Voir les performances du club</button>
+            </g-link>
+          </div>
+        </div>
+      </div>
     </section>
   </Layout>
 </template>
@@ -84,12 +124,6 @@
     }
   }
 
-  @media screen and (min-width: 991px) {
-    .news {
-      border-bottom: 1px solid #f4ece9;
-    }
-  }
-
   .jumbotron {
     background-image: url('../../placeholders/banner/simon-connellan-mfN2CYfjQz4-unsplash.jpg');
     height: 50vh;
@@ -116,6 +150,35 @@
     color: #FE4365;
   }
 
+  button {
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1.9px solid #FE4365;
+    color: #FE4365;
+    background-color: #fff;
+    outline: none;
+  }
+
+  .btn-show-more {
+    background-position: center;
+    transition: background 0.8s;
+  }
+
+  .btn-show-more:hover {
+    background: #fe7b93 radial-gradient(circle, transparent 1%, #fe7b93 1%) center/15000%;
+    color: #fff;
+  }
+
+  .btn-show-more:active {
+    background-color: #fea1b2;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
   .card-title {
     padding-top: 14px;
   }
@@ -124,6 +187,9 @@
     max-width: 500px;
     height: 300px;
     border-radius: 3%;
+    -webkit-border-radius:3%;
+    -moz-border-radius:3%;
+    transition: 0.5s;
   }
 
   .card-img-top:hover {
@@ -134,4 +200,32 @@
     max-height: 500px;
   }
 
+  .social-ppt-link {
+    color: #343a40;
+  }
+
+  .social-ppt-link:hover {
+    text-decoration: none;
+  }
+
+  .social-ppt-img {
+    border-radius: 3%;
+    background-color: #FE4365;
+    height: 300px;
+    width: 100%;
+  }
+
+  .social-ppt-legend {
+    text-align: center;
+    white-space: nowrap;
+    line-height: 300px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: transform .2s;
+  }
+
+  .social-ppt-legend:hover {
+    transform: scale(1.2);
+  }
 </style>

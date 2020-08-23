@@ -63,12 +63,19 @@
     color: #FE4365;
   }
 
+  article {
+    min-height: 70vh;
+  }
+
   .member-image {
     width: auto;
     height: auto;
-    max-width: 260px;
+    min-width: 260px;
+    max-height: 260px;
     float: left;
-    margin-right: 10px;
-    border-radius: 3%;
+    margin: 0 32px 13px 0;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
   }
 </style>

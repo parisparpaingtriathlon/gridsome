@@ -52,12 +52,12 @@
     padding-top: 2rem;
     padding-bottom: 1rem;
     bottom: 0;
-    background-color: #343a40;
-    color: #fff;
+    background-color: #fff;
+    color: #343a40;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;;
+    font-family: 'Oswald', sans-serif;
   }
 
   h2 {
