@@ -17,6 +17,20 @@ module.exports = {
         typeName: 'Member',
         route: '/member/:slug'
       }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'performance/*.md',
+        typeName: 'Performance',
+        route: '/performance/:slug',
+        refs: {
+          peoples: {
+            typeName: 'Member',
+            create: false
+          }
+        }
+      }
     }
   ]
 };
