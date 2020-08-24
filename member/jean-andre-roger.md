@@ -3,6 +3,7 @@ title: Jean-André Roger
 description: "Le président"
 image: "./images/ja-roger.jpg"
 slug: ja_roger
+_id: ja_roger
 ---
 
 Ceci est la page du premier membre représentant officel de la classe des parpaings
