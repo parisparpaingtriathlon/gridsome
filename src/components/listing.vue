@@ -24,7 +24,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <g-link class="dropdown-item" to="/calendar">Calendrier des courses</g-link>
-                        <g-link class="dropdown-item" to="/results">Performances</g-link>
+                        <g-link class="dropdown-item" to="/performances">Performances</g-link>
                     </div>
                 </li>
                 <li class="nav-item">

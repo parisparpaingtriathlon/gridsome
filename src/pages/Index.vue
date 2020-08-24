@@ -60,7 +60,7 @@
           </div>
           <div style="padding-top: 4vh;">
             <p>Retrouvez les records des membres du PPT.</p>
-            <g-link to="/results">
+            <g-link to="/performances">
               <button class="btn-show-more">Voir les performances du club</button>
             </g-link>
           </div>

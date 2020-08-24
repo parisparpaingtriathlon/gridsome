@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb d-flex justify-content-start">
         <li class="breadcrumb-item" aria-current="page">
-          <g-link class="back-to-members" to="/results">Voir la liste des performances</g-link>
+          <g-link class="back-to-members" to="/performances">Voir la liste des performances</g-link>
         </li>
         <li class="breadcrumb-item active" aria-current="page">{{ $page.performance.title}}</li>
       </ol>
