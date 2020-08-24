@@ -3,6 +3,7 @@ title: Firstname Lastname 2
 description: "La coureuse 2"
 image: "./images/logo_fond_noir.png"
 slug: la_coureuse_2
+_id: la_coureuse_2
 ---
 
 Ceci est la page du premier membre représentant officel de la classe des parpaings

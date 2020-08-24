@@ -4,24 +4,24 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb d-flex justify-content-start">
         <li class="breadcrumb-item" aria-current="page">
-          <g-link class="back-to-members" to="/members">Voir la liste des membres</g-link>
+          <g-link class="back-to-members" to="/performances">Voir la liste des performances</g-link>
         </li>
-        <li class="breadcrumb-item active" aria-current="page">{{ $page.member.title}}</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ $page.performance.title}}</li>
       </ol>
     </nav>
     <article class="container">
       <div>
-        <h2>{{ $page.member.title }}</h2>
+        <h2>{{ $page.performance.title }}</h2>
         <div>
-          <g-image class="member-image" :src="$page.member.image"/>
-          <div class="content" v-html="$page.member.content" />
+          <g-image class="member-image" :src="$page.performance.image"/>
+          <div class="content" v-html="$page.performance.content" />
         </div>
-        <div>
-          <div v-for=" { node } in $page.member.belongsTo.edges" :key="node._id">
-            <router-link :to="node.path">
-              {{ node.title }}
-            </router-link>
-          </div>
+      </div>
+      <div>
+        <div v-for="people in $page.performance.peoples" :key="people.slug">
+          <router-link :to="people.path">
+            {{ people.title }}
+          </router-link>
         </div>
       </div>
     </article>
@@ -37,28 +37,22 @@
     },
     metaInfo () {
       return {
-        title: this.$page.member.title
+        title: this.$page.performance.title
       }
     }
   }
 </script>
 
 <page-query>
-  query Member ($path: String!) {
-    member (path: $path) {
+  query Performance ($path: String!) {
+    performance (path: $path) {
       title
       content
       image
-      belongsTo {
-        edges {
-          node {
-            ... on Performance {
-              id
-              title
-              path
-            }
-          }
-        }
+      peoples {
+        path
+        title
+        slug
       }
     }
   }
