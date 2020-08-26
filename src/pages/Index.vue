@@ -77,6 +77,16 @@
   import config from "~/.temp/config.js";
   import Listing from "~/components/listing";
 
+  var scrollDown = document.getElementById("scrollDown");
+  var newsPreview = document.getElementById("newsPreview");
+
+  var truc = function() {
+      scrollDown.click(function(){
+          document.querySelector("body").animate({scrollTop: newsPreview.offset().top }, 'slow');
+          return false;
+      })
+  }
+
   export default {
     components: {
       Listing
@@ -86,6 +96,10 @@
         return config;
       }
     },
+    // mounted: () => scrollDown.click(function(){
+    //     document.querySelector("body").animate({scrollTop: newsPreview.offset().top }, 'slow');
+    //     return false;
+    //   }),
     metaInfo: {
       title: 'Accueil',
     }
